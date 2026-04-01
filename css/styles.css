@@ -3,29 +3,29 @@
    ==================================================== */
 :root {
   --bg-primary:        #ffffff;
-  --bg-secondary:      #f5f7fa;
+  --bg-secondary:      #d4eff9;
   --bg-card:           #ffffff;
-  --border-color:      #e2e8f0;
-  --text-primary:      #1a202c;
-  --text-secondary:    #4a5568;
-  --text-muted:        #718096;
-  --accent:            #2b5797;
-  --accent-hover:      #1e3f70;
-  --accent-light:      #ebf0fa;
-  --tab-active-bg:     #2b5797;
+  --border-color:      #1a6f8a;
+  --text-primary:      #000000;
+  --text-secondary:    #333333;
+  --text-muted:        #666666;
+  --accent:            #40baec;
+  --accent-hover:      #1fa8d8;
+  --accent-light:      #d4eff9;
+  --tab-active-bg:     #1a6f8a;
   --tab-active-text:   #ffffff;
-  --tab-hover-bg:      #ebf0fa;
-  --shadow:            0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.12);
-  --header-bg:         #2b5797;
+  --tab-hover-bg:      #d4eff9;
+  --shadow:            none;
+  --shadow-md:         none;
+  --header-bg:         #1a6f8a;
   --header-text:       #ffffff;
-  --badge-bg:          #ebf0fa;
-  --badge-text:        #2b5797;
-  --link-color:        #2b5797;
-  --link-hover:        #1e3f70;
-  --code-bg:           #f0f4f8;
-  --toggle-bg:         #e2e8f0;
-  --toggle-hover:      #cbd5e0;
+  --badge-bg:          #d4eff9;
+  --badge-text:        #1a6f8a;
+  --link-color:        #40baec;
+  --link-hover:        #1fa8d8;
+  --code-bg:           #d4eff9;
+  --toggle-bg:         #1a6f8a;
+  --toggle-hover:      #2d8fa3;
 }
 
 /* ====================================================
@@ -36,9 +36,9 @@
   --bg-secondary:      #1a1d2e;
   --bg-card:           #1e2235;
   --border-color:      #2d3450;
-  --text-primary:      #e2e8f0;
-  --text-secondary:    #a0aec0;
-  --text-muted:        #718096;
+  --text-primary:      #ffffff;
+  --text-secondary:    #e0e0e0;
+  --text-muted:        #a0a0a0;
   --accent:            #5b8dee;
   --accent-hover:      #7ba4f2;
   --accent-light:      #1e2a4a;
@@ -188,53 +188,66 @@ ul {
 }
 
 .header-controls {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 0.75rem;
+  display: none;
 }
 
 /* ====================================================
-   Theme Selector
+   Theme Toggle Button (Circular, Fixed Position)
    ==================================================== */
-.theme-selector {
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+  background: var(--bg-card);
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 2rem;
-  padding: 0.25rem 0.5rem;
-  backdrop-filter: blur(4px);
+  justify-content: center;
+  z-index: 1000;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-md);
 }
 
-.theme-selector label {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-right: 0.2rem;
-  white-space: nowrap;
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  background: var(--accent-light);
+  border-color: var(--accent);
 }
 
-.theme-btn {
-  background: transparent;
-  border: none;
-  border-radius: 1.5rem;
-  padding: 0.3rem 0.65rem;
-  font-size: 0.78rem;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.75);
-  transition: background 0.2s, color 0.2s;
-  white-space: nowrap;
+.theme-toggle-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-primary);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 0.3s ease;
 }
 
-.theme-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+/* Hide/show icons based on theme */
+.theme-toggle-btn .icon-sun {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-.theme-btn.active {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--accent);
-  font-weight: 600;
+.theme-toggle-btn .icon-moon {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-btn .icon-sun {
+  opacity: 0;
+}
+
+[data-theme="dark"] .theme-toggle-btn .icon-moon {
+  opacity: 1;
 }
 
 /* ====================================================
@@ -271,7 +284,7 @@ ul {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
   white-space: nowrap;
 }
@@ -305,7 +318,7 @@ ul {
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
+  border-radius: 2px;
   padding: 1.5rem;
   box-shadow: var(--shadow);
   transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
@@ -412,13 +425,22 @@ ul {
 }
 
 .badge {
-  background: var(--badge-bg);
-  color: var(--badge-text);
-  border-radius: 2rem;
-  padding: 0.2rem 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 0;
+  padding: 0;
   font-size: 0.78rem;
-  font-weight: 500;
-  transition: background 0.2s;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.separator {
+  color: var(--text-primary);
+  font-weight: normal;
+  font-size: 0.78rem;
 }
 
 /* ====================================================
@@ -444,7 +466,7 @@ ul {
 
 .pub-item .pub-venue {
   font-size: 0.86rem;
-  color: var(--accent);
+  color: var(--text-primary);
   font-style: italic;
   margin-top: 0.1rem;
 }
@@ -654,19 +676,20 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.35rem 0.9rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 2rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  font-weight: bold;
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 
 .contact-link:hover {
-  background: var(--accent-light);
-  border-color: var(--accent);
+  background: transparent;
+  border: none;
   color: var(--accent);
   text-decoration: none;
 }

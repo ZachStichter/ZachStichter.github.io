@@ -13,8 +13,26 @@
 <body>
 
   <!-- ============================================================
-       SITE HEADER
+       THEME TOGGLE BUTTON
        ============================================================ -->
+  <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+    <!-- Sun icon (shown in light mode) -->
+    <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <!-- Moon icon (shown in dark mode) -->
+    <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
   <header class="site-header">
     <div class="header-inner">
 
@@ -29,18 +47,8 @@
         />
         <div class="profile-info">
           <h1>Zach Stichter</h1>
-          <p class="title">PhD Candidate · Chen Lab</p>
+          <p class="title">PhD Candidate • Chen Lab</p>
           <p class="institution">University of Notre Dame</p>
-        </div>
-      </div>
-
-      <!-- Theme selector -->
-      <div class="header-controls">
-        <div class="theme-selector" role="group" aria-label="Color theme">
-          <span class="theme-selector-label" aria-hidden="true">🎨</span>
-          <button class="theme-btn" data-theme="auto"  aria-label="Use system color theme">Auto</button>
-          <button class="theme-btn" data-theme="light" aria-label="Use light theme">Light</button>
-          <button class="theme-btn" data-theme="dark"  aria-label="Use dark theme">Dark</button>
         </div>
       </div>
 
@@ -119,7 +127,9 @@
           </p>
           <div class="contact-row mt-1">
             <a class="contact-link" href="https://biologos.org" target="_blank" rel="noopener">BioLogos</a>
+            <span class="separator">•</span>
             <a class="contact-link" href="https://www.faraday.cam.ac.uk" target="_blank" rel="noopener">Faraday Institute</a>
+            <span class="separator">•</span>
             <a class="contact-link" href="https://www.veritas.org" target="_blank" rel="noopener">The Veritas Forum</a>
           </div>
         </div>
@@ -135,8 +145,7 @@
   <footer class="site-footer">
     <div class="site-wrapper">
       <p>
-        &copy; <span id="current-year"></span> Zach Stichter ·
-        PhD Candidate, University of Notre Dame ·
+        &copy; <span id="current-year"></span> Zach Stichter  •
         <a href="/files/">Files</a>
       </p>
     </div>

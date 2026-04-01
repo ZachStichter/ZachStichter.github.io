@@ -1,0 +1,109 @@
+<svg viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="900" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-size="32" font-weight="bold" text-anchor="middle" fill="#000">
+    Color Palette Options · LIGHT MODE
+  </text>
+  
+  <!-- ============================================================ -->
+  <!-- OPTION 1: MINIMAL LIGHT -->
+  <!-- ============================================================ -->
+  <g>
+    <!-- Title -->
+    <text x="150" y="100" font-size="20" font-weight="bold" fill="#000">
+      Option 1: Minimal Light
+    </text>
+    <text x="150" y="125" font-size="12" fill="#666">
+      Clean, Timeless, Airy
+    </text>
+    
+    <!-- Swatch 1: White Background -->
+    <rect x="30" y="160" width="80" height="80" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+    <text x="130" y="195" font-size="12" font-family="monospace" fill="#000">#ffffff</text>
+    <text x="130" y="210" font-size="11" fill="#666">Base Background</text>
+    
+    <!-- Swatch 2: Accent Cyan -->
+    <rect x="30" y="260" width="80" height="80" fill="#40baec" stroke="#ccc" stroke-width="1"/>
+    <text x="130" y="295" font-size="12" font-family="monospace" fill="#000">#40baec</text>
+    <text x="130" y="310" font-size="11" fill="#666">Primary Accent</text>
+    
+    <!-- Swatch 3: Card Background -->
+    <rect x="30" y="360" width="80" height="80" fill="#f8f8f8" stroke="#ccc" stroke-width="1"/>
+    <text x="130" y="395" font-size="12" font-family="monospace" fill="#000">#f8f8f8</text>
+    <text x="130" y="410" font-size="11" fill="#666">Card Background</text>
+    
+    <!-- Swatch 4: Borders -->
+    <rect x="30" y="460" width="80" height="80" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+    <text x="130" y="495" font-size="12" font-family="monospace" fill="#000">#e0e0e0</text>
+    <text x="130" y="510" font-size="11" fill="#666">Borders/Dividers</text>
+    
+    <!-- Swatch 5: Text -->
+    <rect x="30" y="560" width="80" height="80" fill="#000000" stroke="#ccc" stroke-width="1"/>
+    <text x="130" y="595" font-size="12" font-family="monospace" fill="#fff">#000000</text>
+    <text x="130" y="610" font-size="11" fill="#666">Text (Dark)</text>
+    
+    <!-- Example: Card on white -->
+    <rect x="30" y="680" width="250" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="50" y="715" font-size="14" font-weight="bold" fill="#000">Zach Stichter</text>
+    <text x="50" y="735" font-size="11" fill="#40baec">PhD Candidate · Chen Lab</text>
+    <text x="50" y="755" font-size="10" fill="#666">University of Notre Dame</text>
+    
+    <rect x="30" y="120" width="250" height="2" fill="#e0e0e0"/>
+  </g>
+  
+  <!-- ============================================================ -->
+  <!-- OPTION 2: MONOCHROMATIC TEAL -->
+  <!-- ============================================================ -->
+  <g>
+    <!-- Title -->
+    <text x="600" y="100" font-size="20" font-weight="bold" fill="#000">
+      Option 2: Monochromatic Teal
+    </text>
+    <text x="600" y="125" font-size="12" fill="#666">
+      Cohesive, Sophisticated, Cyan Family
+    </text>
+    
+    <!-- Swatch 1: White Background -->
+    <rect x="480" y="160" width="80" height="80" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+    <text x="580" y="195" font-size="12" font-family="monospace" fill="#000">#ffffff</text>
+    <text x="580" y="210" font-size="11" fill="#666">Base Background</text>
+    
+    <!-- Swatch 2: Accent Cyan -->
+    <rect x="480" y="260" width="80" height="80" fill="#40baec" stroke="#ccc" stroke-width="1"/>
+    <text x="580" y="295" font-size="12" font-family="monospace" fill="#000">#40baec</text>
+    <text x="580" y="310" font-size="11" fill="#666">Primary Accent</text>
+    
+    <!-- Swatch 3: Light Cyan -->
+    <rect x="480" y="360" width="80" height="80" fill="#d4eff9" stroke="#ccc" stroke-width="1"/>
+    <text x="580" y="395" font-size="12" font-family="monospace" fill="#000">#d4eff9</text>
+    <text x="580" y="410" font-size="11" fill="#666">Card Background</text>
+    
+    <!-- Swatch 4: Medium Teal -->
+    <rect x="480" y="460" width="80" height="80" fill="#1b8fa3" stroke="#ccc" stroke-width="1"/>
+    <text x="580" y="495" font-size="12" font-family="monospace" fill="#fff">#1b8fa3</text>
+    <text x="580" y="510" font-size="11" fill="#666">Borders/Dividers</text>
+    
+    <!-- Swatch 5: Text -->
+    <rect x="480" y="560" width="80" height="80" fill="#0d3a42" stroke="#ccc" stroke-width="1"/>
+    <text x="580" y="595" font-size="12" font-family="monospace" fill="#fff">#0d3a42</text>
+    <text x="580" y="610" font-size="11" fill="#666">Text (Dark)</text>
+    
+    <!-- Example: Card on white -->
+    <rect x="480" y="680" width="250" height="100" fill="#ffffff" stroke="#1b8fa3" stroke-width="1"/>
+    <text x="500" y="715" font-size="14" font-weight="bold" fill="#0d3a42">Zach Stichter</text>
+    <text x="500" y="735" font-size="11" fill="#40baec">PhD Candidate · Chen Lab</text>
+    <text x="500" y="755" font-size="10" fill="#1b8fa3">University of Notre Dame</text>
+    
+    <rect x="480" y="120" width="250" height="2" fill="#1b8fa3"/>
+  </g>
+  
+  <!-- Footer note -->
+  <text x="450" y="830" font-size="13" text-anchor="middle" fill="#333">
+    Option 1: Neutral and timeless. Option 2: Cohesive monochromatic cyan/teal family.
+  </text>
+  <text x="450" y="855" font-size="12" text-anchor="middle" fill="#999">
+    Dark mode pairs will be created once light mode is finalized.
+  </text>
+</svg>
