@@ -1,5 +1,5 @@
 /**
- * main.js — Tab navigation + theme management for ZachStichter.github.io
+ * main.js — Theme toggle (light/dark) for ZachStichter.github.io
  */
 
 (function () {
@@ -8,42 +8,52 @@
   /* ── Theme management ─────────────────────────────────────────── */
 
   const THEME_KEY = 'preferred-theme';
-  const VALID_THEMES = ['auto', 'light', 'dark'];
+  const LIGHT_THEME = 'light';
+  const DARK_THEME = 'dark';
+
+  function getSystemTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return DARK_THEME;
+    }
+    return LIGHT_THEME;
+  }
 
   function getStoredTheme() {
     try {
       const stored = localStorage.getItem(THEME_KEY);
-      return VALID_THEMES.includes(stored) ? stored : 'auto';
+      return (stored === LIGHT_THEME || stored === DARK_THEME) ? stored : null;
     } catch (_) {
-      return 'auto';
+      return null;
     }
   }
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    // Update active button state
-    document.querySelectorAll('.theme-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.dataset.theme === theme);
-    });
     try {
       localStorage.setItem(THEME_KEY, theme);
     } catch (_) { /* storage may be unavailable */ }
   }
 
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || LIGHT_THEME;
+    const next = current === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
+    applyTheme(next);
+  }
+
   function initTheme() {
-    const theme = getStoredTheme();
+    // Determine initial theme: stored preference → system preference
+    const storedTheme = getStoredTheme();
+    const theme = storedTheme || getSystemTheme();
     applyTheme(theme);
 
-    document.querySelectorAll('.theme-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        applyTheme(btn.dataset.theme);
-      });
-    });
+    // Set up toggle button
+    const toggleBtn = document.getElementById('theme-toggle-btn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', toggleTheme);
+    }
   }
 
   /* ── Initialise ──────────────────────────────────────────────── */
 
-  document.addEventListener('DOMContentLoaded', function () {
-    initTheme();
-  });
+  document.addEventListener('DOMContentLoaded', initTheme);
 })();

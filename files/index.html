@@ -7,7 +7,7 @@
   <!-- Prevent indexing of this utility page -->
   <meta name="robots" content="noindex, nofollow" />
   <title>Files | Zach Stichter</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
   <style>
     /* Back link button */
     .back-link {
@@ -56,23 +56,32 @@
   </style>
 </head>
 
-<body>
-
   <!-- ============================================================
-       TOP BAR
+       THEME TOGGLE BUTTON
        ============================================================ -->
+  <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+    <!-- Sun icon (shown in light mode) -->
+    <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <!-- Moon icon (shown in dark mode) -->
+    <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
   <div class="files-top-bar">
     <div class="files-top-bar-inner">
       <div>
-        <h1>Zach Stichter · Files</h1>
+        <h1>Zach Stichter • Files</h1>
         <p>Presentations, spreadsheets, and shared resources</p>
-      </div>
-      <!-- Theme selector (same as main page) -->
-      <div class="theme-selector" role="group" aria-label="Color theme">
-        <span aria-hidden="true">🎨</span>
-        <button class="theme-btn" data-theme="auto"  aria-label="Use system color theme">Auto</button>
-        <button class="theme-btn" data-theme="light" aria-label="Use light theme">Light</button>
-        <button class="theme-btn" data-theme="dark"  aria-label="Use dark theme">Dark</button>
       </div>
     </div>
   </div>
@@ -83,7 +92,7 @@
   <main class="site-main">
     <div class="site-wrapper">
 
-      <a class="back-link" href="index.html">
+      <a class="back-link" href="/about/">
         ← Back to main page
       </a>
 
@@ -135,7 +144,7 @@
             <span class="file-icon">🔗</span>
             <div class="file-info">
               <p class="file-name">Another Talk — Workshop 2024</p>
-              <p class="file-desc">Google Slides · opens in a new tab</p>
+              <p class="file-desc">Google Slides • opens in a new tab</p>
             </div>
             <span class="file-type-tag file-type-link">LINK</span>
           </a>
@@ -170,7 +179,7 @@
             <span class="file-icon">🔗</span>
             <div class="file-info">
               <p class="file-name">Shared Analysis Sheet</p>
-              <p class="file-desc">Google Sheets · opens in a new tab</p>
+              <p class="file-desc">Google Sheets • opens in a new tab</p>
             </div>
             <span class="file-type-tag file-type-link">LINK</span>
           </a>
@@ -208,13 +217,13 @@
   <footer class="site-footer">
     <div class="site-wrapper">
       <p>
-        &copy; <span id="current-year"></span> Zach Stichter ·
-        <a href="index.html">← Back to main page</a>
+        &copy; <span id="current-year"></span> Zach Stichter •
+        <a href="/about/">← Back to main page</a>
       </p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
