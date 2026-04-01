@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zach Stichter — PhD Candidate in the Chen Lab at the University of Notre Dame. Research in computational chemistry and molecular dynamics." />
+  <title>Zach Stichter | About</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Preconnect for GitHub avatar -->
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SITE HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Profile row -->
+      <div class="header-profile">
+        <img
+          class="profile-photo"
+          src="https://avatars.githubusercontent.com/u/114510588?v=4"
+          alt="Zach Stichter profile photo"
+          width="96"
+          height="96"
+        />
+        <div class="profile-info">
+          <h1>Zach Stichter</h1>
+          <p class="title">PhD Candidate · Chen Lab</p>
+          <p class="institution">University of Notre Dame</p>
+        </div>
+      </div>
+
+      <!-- Theme selector -->
+      <div class="header-controls">
+        <div class="theme-selector" role="group" aria-label="Color theme">
+          <span class="theme-selector-label" aria-hidden="true">🎨</span>
+          <button class="theme-btn" data-theme="auto"  aria-label="Use system color theme">Auto</button>
+          <button class="theme-btn" data-theme="light" aria-label="Use light theme">Light</button>
+          <button class="theme-btn" data-theme="dark"  aria-label="Use dark theme">Dark</button>
+        </div>
+      </div>
+
+    </div><!-- /.header-inner -->
+  </header>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/presentations/">Presentations</a></li>
+      <li><a href="/publications/">Publications</a></li>
+      <li><a href="/faith-science/">Faith &amp; Science</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="site-main">
+    <div class="site-wrapper">
+
+      <!-- ── ABOUT ─────────────────────────────────────────────── -->
+      <section class="tab-panel">
+
+        <!-- Hero card -->
+        <div class="card">
+          <div class="about-hero">
+            <div class="about-intro">
+              <h2>Zach Stichter</h2>
+              <p class="subtitle">PhD Candidate · University of Notre Dame</p>
+              <p>
+                I am a PhD candidate in the Chen Lab at the University of Notre Dame,
+                where my research focuses on molecular dynamics of molecules under vibrational
+                strong coupling. I investigate simulations of strongly coupled light-matter systems
+                and apply machine learning to chemical problems. I am passionate about rigorous science
+                and its intersection with broader questions of meaning and purpose.
+              </p>
+              <div class="badge-list">
+                <span class="badge">University of Notre Dame</span>
+                <span class="badge">Chen Lab</span>
+                <span class="badge">Computational Chemistry</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact links -->
+          <div class="contact-row">
+            <a class="contact-link" href="https://github.com/ZachStichter" target="_blank" rel="noopener">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg" width="16" height="16" alt="" aria-hidden="true" />
+              GitHub
+            </a>
+            <a class="contact-link" href="mailto:zstichte@nd.edu">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/gmail.svg" width="16" height="16" alt="" aria-hidden="true" />
+              Email
+            </a>
+            <a class="contact-link" href="https://scholar.google.com" target="_blank" rel="noopener">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/googlescholar.svg" width="16" height="16" alt="" aria-hidden="true" />
+              Google Scholar
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com" target="_blank" rel="noopener">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg" width="16" height="16" alt="" aria-hidden="true" />
+              LinkedIn
+            </a>
+            <a class="contact-link" href="https://orcid.org/0000-0001-8813-5302" target="_blank" rel="noopener">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/orcid.svg" width="16" height="16" alt="" aria-hidden="true" />
+              ORCID
+            </a>
+          </div>
+        </div><!-- /.card -->
+
+        <!-- Education -->
+        <div class="card">
+          <h2>Education</h2>
+          <div class="pub-item">
+            <p class="pub-title">Doctor of Philosophy (PhD) — Chemistry</p>
+            <p class="pub-authors">University of Notre Dame · Expected May 2029</p>
+            <p class="pub-venue">Department of Chemistry and Biochemistry · Advisor: Dr. Hsing-Ta (Theta) Chen</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title">Master of Science — Chemistry</p>
+            <p class="pub-authors">Western Kentucky University · May 2024</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title">Bachelor of Science — Chemistry</p>
+            <p class="pub-authors">Grace College · May 2019</p>
+          </div>
+        </div>
+
+      </section><!-- /#tab-about -->
+
+    </div><!-- /.site-wrapper -->
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <p>
+        &copy; <span id="current-year"></span> Zach Stichter ·
+        PhD Candidate, University of Notre Dame ·
+        <a href="../files.html">Files</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

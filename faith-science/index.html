@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zach Stichter's thoughts on faith and science." />
+  <title>Zach Stichter | Faith & Science</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Preconnect for GitHub avatar -->
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SITE HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Profile row -->
+      <div class="header-profile">
+        <img
+          class="profile-photo"
+          src="https://avatars.githubusercontent.com/u/114510588?v=4"
+          alt="Zach Stichter profile photo"
+          width="96"
+          height="96"
+        />
+        <div class="profile-info">
+          <h1>Zach Stichter</h1>
+          <p class="title">PhD Candidate · Chen Lab</p>
+          <p class="institution">University of Notre Dame</p>
+        </div>
+      </div>
+
+      <!-- Theme selector -->
+      <div class="header-controls">
+        <div class="theme-selector" role="group" aria-label="Color theme">
+          <span class="theme-selector-label" aria-hidden="true">🎨</span>
+          <button class="theme-btn" data-theme="auto"  aria-label="Use system color theme">Auto</button>
+          <button class="theme-btn" data-theme="light" aria-label="Use light theme">Light</button>
+          <button class="theme-btn" data-theme="dark"  aria-label="Use dark theme">Dark</button>
+        </div>
+      </div>
+
+    </div><!-- /.header-inner -->
+  </header>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/presentations/">Presentations</a></li>
+      <li><a href="/publications/">Publications</a></li>
+      <li><a href="/faith-science/">Faith &amp; Science</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="site-main">
+    <div class="site-wrapper">
+
+      <!-- ── FAITH &amp; SCIENCE ───────────────────────────────── -->
+      <section class="tab-panel">
+
+        <div class="card">
+          <h2>Faith &amp; Science</h2>
+          <p>
+            I believe that rigorous scientific inquiry and sincere religious faith are
+            not only compatible but mutually enriching. This page is a space where I
+            reflect on the interplay between my work as a scientist and my convictions
+            as a person of faith.
+          </p>
+
+          <blockquote class="faith-quote">
+            "The same God who endowed us with sense, reason, and intellect has also
+            intended for us to use them."
+            <br /><span style="font-style:normal;font-size:0.82rem;color:var(--text-muted)">— Galileo Galilei</span>
+          </blockquote>
+        </div>
+
+        <div class="card">
+          <h3>My Perspective</h3>
+          <p>
+            Share your personal reflection here — how your faith shapes your approach
+            to science, questions you find yourself sitting with, or experiences that
+            have informed your perspective. This page can grow over time as a personal
+            essay, a reading list, or a collection of reflections.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Recommended Reading</h3>
+          <div class="pub-item">
+            <p class="pub-title">The Language of God</p>
+            <p class="pub-authors">Francis Collins</p>
+            <p class="pub-venue">A scientist presents evidence for belief</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title">Mere Christianity</p>
+            <p class="pub-authors">C. S. Lewis</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title">Finding Darwin's God</p>
+            <p class="pub-authors">Kenneth Miller</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Resources &amp; Organizations</h3>
+          <p>
+            Organizations and communities that explore the dialogue between faith and science:
+          </p>
+          <div class="contact-row mt-1">
+            <a class="contact-link" href="https://biologos.org" target="_blank" rel="noopener">BioLogos</a>
+            <a class="contact-link" href="https://www.faraday.cam.ac.uk" target="_blank" rel="noopener">Faraday Institute</a>
+            <a class="contact-link" href="https://www.veritas.org" target="_blank" rel="noopener">The Veritas Forum</a>
+          </div>
+        </div>
+
+      </section><!-- /#tab-faith-science -->
+
+    </div><!-- /.site-wrapper -->
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <p>
+        &copy; <span id="current-year"></span> Zach Stichter ·
+        PhD Candidate, University of Notre Dame ·
+        <a href="../files.html">Files</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

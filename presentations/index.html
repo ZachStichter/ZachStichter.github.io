@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zach Stichter's presentations and talks." />
+  <title>Zach Stichter | Presentations</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Preconnect for GitHub avatar -->
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SITE HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Profile row -->
+      <div class="header-profile">
+        <img
+          class="profile-photo"
+          src="https://avatars.githubusercontent.com/u/114510588?v=4"
+          alt="Zach Stichter profile photo"
+          width="96"
+          height="96"
+        />
+        <div class="profile-info">
+          <h1>Zach Stichter</h1>
+          <p class="title">PhD Candidate · Chen Lab</p>
+          <p class="institution">University of Notre Dame</p>
+        </div>
+      </div>
+
+      <!-- Theme selector -->
+      <div class="header-controls">
+        <div class="theme-selector" role="group" aria-label="Color theme">
+          <span class="theme-selector-label" aria-hidden="true">🎨</span>
+          <button class="theme-btn" data-theme="auto"  aria-label="Use system color theme">Auto</button>
+          <button class="theme-btn" data-theme="light" aria-label="Use light theme">Light</button>
+          <button class="theme-btn" data-theme="dark"  aria-label="Use dark theme">Dark</button>
+        </div>
+      </div>
+
+    </div><!-- /.header-inner -->
+  </header>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/presentations/">Presentations</a></li>
+      <li><a href="/publications/">Publications</a></li>
+      <li><a href="/faith-science/">Faith &amp; Science</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="site-main">
+    <div class="site-wrapper">
+
+      <!-- ── PRESENTATIONS ─────────────────────────────────────── -->
+      <section class="tab-panel">
+
+        <div class="card">
+          <h2>Presentations &amp; Talks</h2>
+
+          <div class="talk-item">
+            <span class="talk-year">2023</span>
+            <div class="talk-content">
+              <p class="talk-title">Resurrecting Simulated Annealing as an Enhanced Sampling Method for Biomolecular Modeling</p>
+              <p class="talk-venue">Kentucky Academy of Sciences Annual Meeting · Highland Heights, Kentucky</p>
+            </div>
+          </div>
+
+          <div class="talk-item">
+            <span class="talk-year">2023</span>
+            <div class="talk-content">
+              <p class="talk-title">Conformational Space Search Techniques to Improve TagDock: Frameworks for Modeling Backbone Flexibility in Rapid Molecular Docking</p>
+              <p class="talk-venue">ACS Fall Meeting · San Francisco, California</p>
+            </div>
+          </div>
+
+          <div class="talk-item">
+            <span class="talk-year">2023</span>
+            <div class="talk-content">
+              <p class="talk-title">Conformational Space Search Techniques to Improve Rapid Protein Structure Determination</p>
+              <p class="talk-venue">Student Scholar Showcase · Western Kentucky University</p>
+            </div>
+          </div>
+
+          <div class="talk-item">
+            <span class="talk-year">2018</span>
+            <div class="talk-content">
+              <p class="talk-title">Charles' Law and Internal Energy</p>
+              <p class="talk-venue">Annual Meeting of the Indiana Academy of Science · Indianapolis, Indiana</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section><!-- /#tab-presentations -->
+
+    </div><!-- /.site-wrapper -->
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <p>
+        &copy; <span id="current-year"></span> Zach Stichter ·
+        PhD Candidate, University of Notre Dame ·
+        <a href="../files.html">Files</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
