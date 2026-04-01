@@ -1,0 +1,737 @@
+/* ====================================================
+   CSS Custom Properties — Light Theme (default)
+   ==================================================== */
+:root {
+  --bg-primary:        #ffffff;
+  --bg-secondary:      #f5f7fa;
+  --bg-card:           #ffffff;
+  --border-color:      #e2e8f0;
+  --text-primary:      #1a202c;
+  --text-secondary:    #4a5568;
+  --text-muted:        #718096;
+  --accent:            #2b5797;
+  --accent-hover:      #1e3f70;
+  --accent-light:      #ebf0fa;
+  --tab-active-bg:     #2b5797;
+  --tab-active-text:   #ffffff;
+  --tab-hover-bg:      #ebf0fa;
+  --shadow:            0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.12);
+  --header-bg:         #2b5797;
+  --header-text:       #ffffff;
+  --badge-bg:          #ebf0fa;
+  --badge-text:        #2b5797;
+  --link-color:        #2b5797;
+  --link-hover:        #1e3f70;
+  --code-bg:           #f0f4f8;
+  --toggle-bg:         #e2e8f0;
+  --toggle-hover:      #cbd5e0;
+}
+
+/* ====================================================
+   Dark Theme
+   ==================================================== */
+[data-theme="dark"] {
+  --bg-primary:        #0f1117;
+  --bg-secondary:      #1a1d2e;
+  --bg-card:           #1e2235;
+  --border-color:      #2d3450;
+  --text-primary:      #e2e8f0;
+  --text-secondary:    #a0aec0;
+  --text-muted:        #718096;
+  --accent:            #5b8dee;
+  --accent-hover:      #7ba4f2;
+  --accent-light:      #1e2a4a;
+  --tab-active-bg:     #5b8dee;
+  --tab-active-text:   #ffffff;
+  --tab-hover-bg:      #1e2a4a;
+  --shadow:            0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.5);
+  --header-bg:         #141828;
+  --header-text:       #e2e8f0;
+  --badge-bg:          #1e2a4a;
+  --badge-text:        #5b8dee;
+  --link-color:        #5b8dee;
+  --link-hover:        #7ba4f2;
+  --code-bg:           #1a1d2e;
+  --toggle-bg:         #2d3450;
+  --toggle-hover:      #3a4266;
+}
+
+/* Auto-respect OS preference when theme is "auto" */
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    --bg-primary:        #0f1117;
+    --bg-secondary:      #1a1d2e;
+    --bg-card:           #1e2235;
+    --border-color:      #2d3450;
+    --text-primary:      #e2e8f0;
+    --text-secondary:    #a0aec0;
+    --text-muted:        #718096;
+    --accent:            #5b8dee;
+    --accent-hover:      #7ba4f2;
+    --accent-light:      #1e2a4a;
+    --tab-active-bg:     #5b8dee;
+    --tab-active-text:   #ffffff;
+    --tab-hover-bg:      #1e2a4a;
+    --shadow:            0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.5);
+    --header-bg:         #141828;
+    --header-text:       #e2e8f0;
+    --badge-bg:          #1e2a4a;
+    --badge-text:        #5b8dee;
+    --link-color:        #5b8dee;
+    --link-hover:        #7ba4f2;
+    --code-bg:           #1a1d2e;
+    --toggle-bg:         #2d3450;
+    --toggle-hover:      #3a4266;
+  }
+}
+
+/* ====================================================
+   Reset & Base
+   ==================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ====================================================
+   Layout
+   ==================================================== */
+.site-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ====================================================
+   Header
+   ==================================================== */
+.site-header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 2rem 0 0;
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.25s ease;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.profile-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-info h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.profile-info .title {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+
+.profile-info .institution {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin-top: 0.15rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0.75rem;
+}
+
+/* ====================================================
+   Theme Selector
+   ==================================================== */
+.theme-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+  padding: 0.25rem 0.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.theme-selector label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.2rem;
+  white-space: nowrap;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.75);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.theme-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ====================================================
+   Navigation Tabs
+   ==================================================== */
+.site-nav {
+  background-color: var(--header-bg);
+  transition: background-color 0.25s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-list::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-list li {
+  flex-shrink: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.75rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.nav-list a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.nav-list a.active {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  font-weight: 600;
+}
+
+/* ====================================================
+   Main Content
+   ==================================================== */
+.site-main {
+  padding: 2rem 0 3rem;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* ====================================================
+   Cards
+   ==================================================== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.card + .card {
+  margin-top: 1.25rem;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.card p {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.card p + p {
+  margin-top: 0.6rem;
+}
+
+/* ====================================================
+   Section headings
+   ==================================================== */
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.section-subheading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 1.5rem 0 0.75rem;
+}
+
+/* ====================================================
+   About Tab — profile hero
+   ==================================================== */
+.about-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-intro h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.about-intro .subtitle {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.about-intro p {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ====================================================
+   Badge / Tag chips
+   ==================================================== */
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: 2rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/* ====================================================
+   Publication list
+   ==================================================== */
+.pub-item {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.pub-item .pub-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.pub-item .pub-authors {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.pub-item .pub-venue {
+  font-size: 0.86rem;
+  color: var(--accent);
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+.pub-item .pub-links {
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+  padding: 0.15rem 0.55rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.pub-link:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ====================================================
+   Presentation / Talk list
+   ==================================================== */
+.talk-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.talk-item:last-child {
+  border-bottom: none;
+}
+
+.talk-year {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 3.5rem;
+  padding-top: 0.1rem;
+}
+
+.talk-content .talk-title {
+  font-weight: 600;
+  font-size: 0.93rem;
+  color: var(--text-primary);
+}
+
+.talk-content .talk-venue {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.talk-content .talk-links {
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ====================================================
+   Files Page
+   ==================================================== */
+.files-header {
+  margin-bottom: 1.5rem;
+}
+
+.files-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.files-header p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+}
+
+.files-section {
+  margin-bottom: 2rem;
+}
+
+.files-section h2 {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.file-item:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.file-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+}
+
+.file-info .file-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.file-info .file-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.file-type-tag {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.3rem;
+  flex-shrink: 0;
+}
+
+.file-type-pptx { background: #fff0eb; color: #c0392b; }
+.file-type-xlsx { background: #ebfff0; color: #27ae60; }
+.file-type-link { background: #ebf0ff; color: #2b5797; }
+.file-type-pdf  { background: #fdf0f0; color: #c0392b; }
+
+[data-theme="dark"] .file-type-pptx { background: #3a1a14; color: #e07060; }
+[data-theme="dark"] .file-type-xlsx { background: #14301a; color: #50c878; }
+[data-theme="dark"] .file-type-link { background: #1a2040; color: #7ba4f2; }
+[data-theme="dark"] .file-type-pdf  { background: #3a1414; color: #e07070; }
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] .file-type-pptx { background: #3a1a14; color: #e07060; }
+  [data-theme="auto"] .file-type-xlsx { background: #14301a; color: #50c878; }
+  [data-theme="auto"] .file-type-link { background: #1a2040; color: #7ba4f2; }
+  [data-theme="auto"] .file-type-pdf  { background: #3a1414; color: #e07070; }
+}
+
+/* ====================================================
+   Faith & Science — blockquote style
+   ==================================================== */
+.faith-quote {
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1.25rem;
+  background: var(--accent-light);
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  transition: background 0.25s;
+}
+
+/* ====================================================
+   Contact row
+   ==================================================== */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.contact-link:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ====================================================
+   Footer
+   ==================================================== */
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+/* ====================================================
+   Utility
+   ==================================================== */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+
+.text-muted { color: var(--text-muted); font-size: 0.85rem; }
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+@media (max-width: 600px) {
+  .header-profile {
+    gap: 1rem;
+  }
+  .profile-photo {
+    width: 72px;
+    height: 72px;
+  }
+  .profile-info h1 {
+    font-size: 1.2rem;
+  }
+  .about-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-photo {
+    width: 110px;
+    height: 110px;
+  }
+  .badge-list {
+    justify-content: center;
+  }
+  .nav-list a {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.82rem;
+  }
+  .talk-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .talk-year {
+    font-size: 0.78rem;
+  }
+}

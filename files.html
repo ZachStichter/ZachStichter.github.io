@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Files — Zach Stichter" />
+  <!-- Prevent indexing of this utility page -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Files | Zach Stichter</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Back link button */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.4rem;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      transition: background 0.2s, color 0.2s;
+    }
+    .back-link:hover {
+      background: var(--accent-light);
+      color: var(--accent);
+      text-decoration: none;
+    }
+    /* Files-page header bar */
+    .files-top-bar {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 0;
+      transition: background-color 0.25s;
+    }
+    .files-top-bar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .files-top-bar h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .files-top-bar p {
+      font-size: 0.82rem;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       TOP BAR
+       ============================================================ -->
+  <div class="files-top-bar">
+    <div class="files-top-bar-inner">
+      <div>
+        <h1>Zach Stichter · Files</h1>
+        <p>Presentations, spreadsheets, and shared resources</p>
+      </div>
+      <!-- Theme selector (same as main page) -->
+      <div class="theme-selector" role="group" aria-label="Color theme">
+        <span aria-hidden="true">🎨</span>
+        <button class="theme-btn" data-theme="auto"  aria-label="Use system color theme">Auto</button>
+        <button class="theme-btn" data-theme="light" aria-label="Use light theme">Light</button>
+        <button class="theme-btn" data-theme="dark"  aria-label="Use dark theme">Dark</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="site-main">
+    <div class="site-wrapper">
+
+      <a class="back-link" href="index.html">
+        ← Back to main page
+      </a>
+
+      <!-- ── HOW TO USE (for the owner) ─────────────────────────
+           Remove or comment out this block once you've added your
+           real files. It describes how to add entries below.
+           ─────────────────────────────────────────────────────── -->
+      <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 1.5rem;">
+        <h2 style="margin-bottom:0.5rem;">📌 How to add files</h2>
+        <p>
+          Copy one of the <code style="background:var(--code-bg);padding:0.1rem 0.3rem;border-radius:0.25rem;font-size:0.85em;">&lt;a class="file-item"&gt;</code>
+          examples below and update:
+        </p>
+        <ul style="margin:0.6rem 0 0.6rem 1.2rem;font-size:0.88rem;color:var(--text-secondary);list-style:disc;">
+          <li><strong>href</strong> — relative path to a local file (e.g. <code style="background:var(--code-bg);padding:0 0.25rem;border-radius:0.25rem;">files/talk-2025.pptx</code>) or an absolute URL.</li>
+          <li><strong>id</strong> — a slug used to deep-link from other pages (e.g. <code style="background:var(--code-bg);padding:0 0.25rem;border-radius:0.25rem;">id="presentation-slug"</code>).</li>
+          <li>Set <strong>download</strong> attribute on local file links so the browser downloads instead of trying to preview.</li>
+          <li>For online links (Google Slides, OneDrive, etc.) use <code style="background:var(--code-bg);padding:0 0.25rem;border-radius:0.25rem;">target="_blank"</code>.</li>
+        </ul>
+        <p style="font-size:0.85rem;color:var(--text-muted);">
+          You can hide this block by adding <code style="background:var(--code-bg);padding:0 0.25rem;border-radius:0.25rem;">style="display:none"</code> to it.
+        </p>
+      </div>
+
+      <!-- ── PRESENTATIONS ─────────────────────────────────────── -->
+      <div class="files-section">
+        <h2>Presentations</h2>
+        <div class="file-list">
+
+          <!-- PPTX example (local file) -->
+          <a class="file-item"
+             id="presentation-slug"
+             href="files/example-talk-2025.pptx"
+             download>
+            <span class="file-icon">📊</span>
+            <div class="file-info">
+              <p class="file-name">Example Talk Title — Conference 2025</p>
+              <p class="file-desc">Replace with your actual presentation file.</p>
+            </div>
+            <span class="file-type-tag file-type-pptx">PPTX</span>
+          </a>
+
+          <!-- Online link example (Google Slides / OneDrive) -->
+          <a class="file-item"
+             id="presentation-slug-2"
+             href="https://docs.google.com/presentation/d/REPLACE_WITH_YOUR_ID/edit?usp=sharing"
+             target="_blank"
+             rel="noopener">
+            <span class="file-icon">🔗</span>
+            <div class="file-info">
+              <p class="file-name">Another Talk — Workshop 2024</p>
+              <p class="file-desc">Google Slides · opens in a new tab</p>
+            </div>
+            <span class="file-type-tag file-type-link">LINK</span>
+          </a>
+
+        </div>
+      </div><!-- /.files-section presentations -->
+
+      <!-- ── SPREADSHEETS / DATA ───────────────────────────────── -->
+      <div class="files-section">
+        <h2>Data &amp; Spreadsheets</h2>
+        <div class="file-list">
+
+          <!-- XLSX example (local file) -->
+          <a class="file-item"
+             id="data-example"
+             href="files/example-data.xlsx"
+             download>
+            <span class="file-icon">📈</span>
+            <div class="file-info">
+              <p class="file-name">Example Dataset</p>
+              <p class="file-desc">Supporting data for [project / publication].</p>
+            </div>
+            <span class="file-type-tag file-type-xlsx">XLSX</span>
+          </a>
+
+          <!-- Online spreadsheet example -->
+          <a class="file-item"
+             id="data-online"
+             href="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_ID/edit?usp=sharing"
+             target="_blank"
+             rel="noopener">
+            <span class="file-icon">🔗</span>
+            <div class="file-info">
+              <p class="file-name">Shared Analysis Sheet</p>
+              <p class="file-desc">Google Sheets · opens in a new tab</p>
+            </div>
+            <span class="file-type-tag file-type-link">LINK</span>
+          </a>
+
+        </div>
+      </div><!-- /.files-section data -->
+
+      <!-- ── DOCUMENTS / OTHER ─────────────────────────────────── -->
+      <div class="files-section">
+        <h2>Documents</h2>
+        <div class="file-list">
+
+          <!-- PDF example -->
+          <a class="file-item"
+             id="cv"
+             href="files/cv.pdf"
+             download>
+            <span class="file-icon">📄</span>
+            <div class="file-info">
+              <p class="file-name">Curriculum Vitae (CV)</p>
+              <p class="file-desc">Updated [Month Year]</p>
+            </div>
+            <span class="file-type-tag file-type-pdf">PDF</span>
+          </a>
+
+        </div>
+      </div><!-- /.files-section documents -->
+
+    </div><!-- /.site-wrapper -->
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <p>
+        &copy; <span id="current-year"></span> Zach Stichter ·
+        <a href="index.html">← Back to main page</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
