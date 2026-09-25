@@ -11,6 +11,28 @@
   const LIGHT_THEME = 'light';
   const DARK_THEME = 'dark';
 
+  const NAV_ITEMS = [
+    { href: '/about/', label: 'About' },
+    { href: '/research/', label: 'Research' },
+    { href: '/presentations/', label: 'Presentations' },
+    { href: '/publications/', label: 'Publications' },
+    { href: '/faith-science/', label: 'Faith &amp; Science' }
+  ];
+
+  class SiteNav extends HTMLElement {
+    connectedCallback() {
+      const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+      const links = NAV_ITEMS.map(({ href, label }) => {
+        const isCurrent = href.replace(/\/$/, '') === currentPath;
+        return `<li><a href="${href}"${isCurrent ? ' class="active" aria-current="page"' : ''}>${label}</a></li>`;
+      }).join('');
+
+      this.outerHTML = `<nav class="site-nav" aria-label="Main navigation"><ul class="nav-list">${links}</ul></nav>`;
+    }
+  }
+
+  customElements.define('site-nav', SiteNav);
+
   function getSystemTheme() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return DARK_THEME;

@@ -32,59 +32,59 @@
    Dark Theme
    ==================================================== */
 [data-theme="dark"] {
-  --bg-primary:        #0f1117;
-  --bg-secondary:      #1a1d2e;
-  --bg-card:           #1e2235;
-  --border-color:      #2d3450;
+  --bg-primary:        #0b0f13; /* Deep Slate */
+  --bg-secondary:      #12161a;
+  --bg-card:           #161a1f;
+  --border-color:      #1a6f8a;
   --text-primary:      #ffffff;
   --text-secondary:    #e0e0e0;
   --text-muted:        #a0a0a0;
-  --accent:            #5b8dee;
+  --accent:            #40baec;
   --accent-hover:      #7ba4f2;
-  --accent-light:      #1e2a4a;
-  --tab-active-bg:     #5b8dee;
+  --accent-light:      #0b1012;
+  --tab-active-bg:     #40baec;
   --tab-active-text:   #ffffff;
-  --tab-hover-bg:      #1e2a4a;
-  --shadow:            0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.5);
-  --header-bg:         #141828;
-  --header-text:       #e2e8f0;
-  --badge-bg:          #1e2a4a;
-  --badge-text:        #5b8dee;
-  --link-color:        #5b8dee;
+  --tab-hover-bg:      #0b1012;
+  --shadow:            none;
+  --shadow-md:         none;
+  --header-bg:         #0d1a20;
+  --header-text:       #ffffff;
+  --badge-bg:          transparent;
+  --badge-text:        #ffffff;
+  --link-color:        #40baec;
   --link-hover:        #7ba4f2;
-  --code-bg:           #1a1d2e;
-  --toggle-bg:         #2d3450;
-  --toggle-hover:      #3a4266;
+  --code-bg:           #0b1012;
+  --toggle-bg:         #11151a;
+  --toggle-hover:      #1b2630;
 }
 
 /* Auto-respect OS preference when theme is "auto" */
 @media (prefers-color-scheme: dark) {
   [data-theme="auto"] {
-    --bg-primary:        #0f1117;
-    --bg-secondary:      #1a1d2e;
-    --bg-card:           #1e2235;
-    --border-color:      #2d3450;
-    --text-primary:      #e2e8f0;
-    --text-secondary:    #a0aec0;
-    --text-muted:        #718096;
-    --accent:            #5b8dee;
+    --bg-primary:        #0b0f13; /* Deep Slate */
+    --bg-secondary:      #12161a;
+    --bg-card:           #161a1f;
+    --border-color:      #1a6f8a;
+    --text-primary:      #ffffff;
+    --text-secondary:    #e0e0e0;
+    --text-muted:        #a0a0a0;
+    --accent:            #40baec;
     --accent-hover:      #7ba4f2;
-    --accent-light:      #1e2a4a;
-    --tab-active-bg:     #5b8dee;
+    --accent-light:      #0b1012;
+    --tab-active-bg:     #40baec;
     --tab-active-text:   #ffffff;
-    --tab-hover-bg:      #1e2a4a;
-    --shadow:            0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.5);
-    --header-bg:         #141828;
-    --header-text:       #e2e8f0;
-    --badge-bg:          #1e2a4a;
-    --badge-text:        #5b8dee;
-    --link-color:        #5b8dee;
+    --tab-hover-bg:      #0b1012;
+    --shadow:            none;
+    --shadow-md:         none;
+    --header-bg:         #0d1a20;
+    --header-text:       #ffffff;
+    --badge-bg:          transparent;
+    --badge-text:        #ffffff;
+    --link-color:        #40baec;
     --link-hover:        #7ba4f2;
-    --code-bg:           #1a1d2e;
-    --toggle-bg:         #2d3450;
-    --toggle-hover:      #3a4266;
+    --code-bg:           #0b1012;
+    --toggle-bg:         #11151a;
+    --toggle-hover:      #1b2630;
   }
 }
 
@@ -685,6 +685,20 @@ ul {
   font-weight: bold;
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.contact-icon {
+  filter: brightness(0);
+}
+
+[data-theme="dark"] .contact-icon {
+  filter: brightness(0) invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] .contact-icon {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .contact-link:hover {

@@ -1,109 +1,238 @@
-<svg viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="900" height="900" fill="#fafafa"/>
-  
-  <!-- Title -->
-  <text x="450" y="40" font-size="32" font-weight="bold" text-anchor="middle" fill="#000">
-    Color Palette Options · LIGHT MODE
-  </text>
-  
-  <!-- ============================================================ -->
-  <!-- OPTION 1: MINIMAL LIGHT -->
-  <!-- ============================================================ -->
-  <g>
-    <!-- Title -->
-    <text x="150" y="100" font-size="20" font-weight="bold" fill="#000">
-      Option 1: Minimal Light
-    </text>
-    <text x="150" y="125" font-size="12" fill="#666">
-      Clean, Timeless, Airy
-    </text>
-    
-    <!-- Swatch 1: White Background -->
-    <rect x="30" y="160" width="80" height="80" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-    <text x="130" y="195" font-size="12" font-family="monospace" fill="#000">#ffffff</text>
-    <text x="130" y="210" font-size="11" fill="#666">Base Background</text>
-    
-    <!-- Swatch 2: Accent Cyan -->
-    <rect x="30" y="260" width="80" height="80" fill="#40baec" stroke="#ccc" stroke-width="1"/>
-    <text x="130" y="295" font-size="12" font-family="monospace" fill="#000">#40baec</text>
-    <text x="130" y="310" font-size="11" fill="#666">Primary Accent</text>
-    
-    <!-- Swatch 3: Card Background -->
-    <rect x="30" y="360" width="80" height="80" fill="#f8f8f8" stroke="#ccc" stroke-width="1"/>
-    <text x="130" y="395" font-size="12" font-family="monospace" fill="#000">#f8f8f8</text>
-    <text x="130" y="410" font-size="11" fill="#666">Card Background</text>
-    
-    <!-- Swatch 4: Borders -->
-    <rect x="30" y="460" width="80" height="80" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
-    <text x="130" y="495" font-size="12" font-family="monospace" fill="#000">#e0e0e0</text>
-    <text x="130" y="510" font-size="11" fill="#666">Borders/Dividers</text>
-    
-    <!-- Swatch 5: Text -->
-    <rect x="30" y="560" width="80" height="80" fill="#000000" stroke="#ccc" stroke-width="1"/>
-    <text x="130" y="595" font-size="12" font-family="monospace" fill="#fff">#000000</text>
-    <text x="130" y="610" font-size="11" fill="#666">Text (Dark)</text>
-    
-    <!-- Example: Card on white -->
-    <rect x="30" y="680" width="250" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
-    <text x="50" y="715" font-size="14" font-weight="bold" fill="#000">Zach Stichter</text>
-    <text x="50" y="735" font-size="11" fill="#40baec">PhD Candidate · Chen Lab</text>
-    <text x="50" y="755" font-size="10" fill="#666">University of Notre Dame</text>
-    
-    <rect x="30" y="120" width="250" height="2" fill="#e0e0e0"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
+  <style>
+    .title { font: 600 18px/1.1 'Segoe UI', system-ui, sans-serif; fill:#222 }
+    .label { font: 500 12px/1.1 'Segoe UI', system-ui, sans-serif; fill:#222 }
+    .hex { font: 400 11px/1.1 'Segoe UI', system-ui, monospace; fill:#222 }
+    .col-title { font: 700 14px/1.1 'Segoe UI', system-ui, sans-serif; fill:#111 }
+    .preview-text { font: 600 13px/1.1 'Segoe UI', system-ui, sans-serif }
+    .card-title { font: 700 14px/1.1 'Segoe UI', system-ui, sans-serif }
+    .card-body { font: 400 12px/1.1 'Segoe UI', system-ui, sans-serif }
+  </style>
+
+  <rect x="0" y="0" width="1100" height="700" fill="#ffffff" />
+  <text x="20" y="28" class="title">Color Palettes — Current Light Theme + 4 Dark Theme Options</text>
+
+  <!-- Column positions -->
+  <!-- 5 columns, each 210px wide with 20px gap: x = 20 + i*(210+20) -->
+
+  <!-- Data for each column: title, and swatches -->
+
+  <!-- Light (Current) -->
+  <g transform="translate(20,60)">
+    <text class="col-title" x="0" y="0">Light (current)</text>
+
+    <!-- swatches: bg-primary, bg-secondary, bg-card, border, text, accent, link, code, header, toggle -->
+    <g transform="translate(0,18)">
+      <rect x="0" y="0" width="200" height="34" fill="#ffffff" stroke="#ddd"/>
+      <text x="8" y="22" class="label" fill="#000">Background</text>
+      <text x="160" y="22" class="hex">#ffffff</text>
+
+      <rect x="0" y="44" width="200" height="34" fill="#d4eff9" stroke="#ddd"/>
+      <text x="8" y="66" class="label">Secondary</text>
+      <text x="160" y="66" class="hex">#d4eff9</text>
+
+      <rect x="0" y="88" width="200" height="34" fill="#ffffff" stroke="#ddd"/>
+      <text x="8" y="110" class="label">Card</text>
+      <text x="160" y="110" class="hex">#ffffff</text>
+
+      <rect x="0" y="132" width="200" height="34" fill="#1a6f8a" stroke="#ddd"/>
+      <text x="8" y="154" class="label" fill="#fff">Border</text>
+      <text x="160" y="154" class="hex" fill="#fff">#1a6f8a</text>
+
+      <rect x="0" y="176" width="200" height="34" fill="#ffffff" stroke="#ddd"/>
+      <text x="8" y="198" class="label" fill="#000">Text</text>
+      <text x="160" y="198" class="hex" fill="#000">#000000</text>
+
+      <rect x="0" y="220" width="200" height="34" fill="#40baec" stroke="#ddd"/>
+      <text x="8" y="242" class="label" fill="#fff">Accent</text>
+      <text x="160" y="242" class="hex" fill="#fff">#40baec</text>
+
+      <rect x="0" y="264" width="200" height="34" fill="#40baec" stroke="#ddd"/>
+      <text x="8" y="286" class="label" fill="#fff">Link</text>
+      <text x="160" y="286" class="hex" fill="#fff">#40baec</text>
+
+      <rect x="0" y="308" width="200" height="34" fill="#d4eff9" stroke="#ddd"/>
+      <text x="8" y="330" class="label">Code bg</text>
+      <text x="160" y="330" class="hex">#d4eff9</text>
+
+      <rect x="0" y="352" width="200" height="34" fill="#1a6f8a" stroke="#ddd"/>
+      <text x="8" y="374" class="label" fill="#fff">Header</text>
+      <text x="160" y="374" class="hex" fill="#fff">#1a6f8a</text>
+
+      <rect x="0" y="396" width="200" height="34" fill="#1a6f8a" stroke="#ddd"/>
+      <text x="8" y="418" class="label" fill="#fff">Toggle</text>
+      <text x="160" y="418" class="hex" fill="#fff">#1a6f8a</text>
+
+      <!-- Previews -->
+      <rect x="0" y="446" width="200" height="40" fill="#1a6f8a"/>
+      <text x="12" y="472" class="preview-text" fill="#ffffff">Header preview</text>
+
+      <rect x="0" y="492" width="200" height="90" fill="#ffffff" stroke="#1a6f8a"/>
+      <text x="12" y="522" class="card-title" fill="#000000">Card title</text>
+      <text x="12" y="537" class="card-body" fill="#000000" dominant-baseline="middle">Card body text preview</text>
+    </g>
   </g>
-  
-  <!-- ============================================================ -->
-  <!-- OPTION 2: MONOCHROMATIC TEAL -->
-  <!-- ============================================================ -->
-  <g>
-    <!-- Title -->
-    <text x="600" y="100" font-size="20" font-weight="bold" fill="#000">
-      Option 2: Monochromatic Teal
-    </text>
-    <text x="600" y="125" font-size="12" fill="#666">
-      Cohesive, Sophisticated, Cyan Family
-    </text>
-    
-    <!-- Swatch 1: White Background -->
-    <rect x="480" y="160" width="80" height="80" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-    <text x="580" y="195" font-size="12" font-family="monospace" fill="#000">#ffffff</text>
-    <text x="580" y="210" font-size="11" fill="#666">Base Background</text>
-    
-    <!-- Swatch 2: Accent Cyan -->
-    <rect x="480" y="260" width="80" height="80" fill="#40baec" stroke="#ccc" stroke-width="1"/>
-    <text x="580" y="295" font-size="12" font-family="monospace" fill="#000">#40baec</text>
-    <text x="580" y="310" font-size="11" fill="#666">Primary Accent</text>
-    
-    <!-- Swatch 3: Light Cyan -->
-    <rect x="480" y="360" width="80" height="80" fill="#d4eff9" stroke="#ccc" stroke-width="1"/>
-    <text x="580" y="395" font-size="12" font-family="monospace" fill="#000">#d4eff9</text>
-    <text x="580" y="410" font-size="11" fill="#666">Card Background</text>
-    
-    <!-- Swatch 4: Medium Teal -->
-    <rect x="480" y="460" width="80" height="80" fill="#1b8fa3" stroke="#ccc" stroke-width="1"/>
-    <text x="580" y="495" font-size="12" font-family="monospace" fill="#fff">#1b8fa3</text>
-    <text x="580" y="510" font-size="11" fill="#666">Borders/Dividers</text>
-    
-    <!-- Swatch 5: Text -->
-    <rect x="480" y="560" width="80" height="80" fill="#0d3a42" stroke="#ccc" stroke-width="1"/>
-    <text x="580" y="595" font-size="12" font-family="monospace" fill="#fff">#0d3a42</text>
-    <text x="580" y="610" font-size="11" fill="#666">Text (Dark)</text>
-    
-    <!-- Example: Card on white -->
-    <rect x="480" y="680" width="250" height="100" fill="#ffffff" stroke="#1b8fa3" stroke-width="1"/>
-    <text x="500" y="715" font-size="14" font-weight="bold" fill="#0d3a42">Zach Stichter</text>
-    <text x="500" y="735" font-size="11" fill="#40baec">PhD Candidate · Chen Lab</text>
-    <text x="500" y="755" font-size="10" fill="#1b8fa3">University of Notre Dame</text>
-    
-    <rect x="480" y="120" width="250" height="2" fill="#1b8fa3"/>
+
+  <!-- Dark Option 1: Teal Night -->
+  <g transform="translate(250,60)">
+    <text class="col-title" x="0" y="0">Dark — Teal Night</text>
+    <g transform="translate(0,18)">
+      <rect x="0" y="0" width="200" height="34" fill="#071021" stroke="#0a0a0a"/>
+      <text x="8" y="22" class="label" fill="#fff">Background</text>
+      <text x="160" y="22" class="hex" fill="#fff">#071021</text>
+
+      <rect x="0" y="44" width="200" height="34" fill="#0d2730"/>
+      <text x="8" y="66" class="label" fill="#fff">Secondary</text>
+      <text x="160" y="66" class="hex" fill="#fff">#0d2730</text>
+
+      <rect x="0" y="88" width="200" height="34" fill="#0f2b36"/>
+      <text x="8" y="110" class="label" fill="#fff">Card</text>
+      <text x="160" y="110" class="hex" fill="#fff">#0f2b36</text>
+
+      <rect x="0" y="132" width="200" height="34" fill="#1a6f8a"/>
+      <text x="8" y="154" class="label" fill="#fff">Border</text>
+      <text x="160" y="154" class="hex" fill="#fff">#1a6f8a</text>
+
+      <rect x="0" y="176" width="200" height="34" fill="#071021"/>
+      <text x="8" y="198" class="label" fill="#fff">Text</text>
+      <text x="160" y="198" class="hex" fill="#fff">#ffffff</text>
+
+      <rect x="0" y="220" width="200" height="34" fill="#40baec"/>
+      <text x="8" y="242" class="label" fill="#ffffff">Accent</text>
+      <text x="160" y="242" class="hex" fill="#ffffff">#40baec</text>
+
+      <rect x="0" y="264" width="200" height="34" fill="#40baec"/>
+      <text x="8" y="286" class="label" fill="#ffffff">Link</text>
+      <text x="160" y="286" class="hex" fill="#ffffff">#40baec</text>
+
+      <rect x="0" y="308" width="200" height="34" fill="#071821"/>
+      <text x="8" y="330" class="label" fill="#fff">Code bg</text>
+      <text x="160" y="330" class="hex" fill="#fff">#071821</text>
+
+      <rect x="0" y="352" width="200" height="34" fill="#0b2330"/>
+      <text x="8" y="374" class="label" fill="#fff">Header</text>
+      <text x="160" y="374" class="hex" fill="#fff">#0b2330</text>
+
+      <rect x="0" y="396" width="200" height="34" fill="#133444"/>
+      <text x="8" y="418" class="label" fill="#fff">Toggle</text>
+      <text x="160" y="418" class="hex" fill="#fff">#133444</text>
+
+      <rect x="0" y="446" width="200" height="40" fill="#0b2330"/>
+      <text x="12" y="472" class="preview-text" fill="#ffffff">Header preview</text>
+
+      <rect x="0" y="492" width="200" height="90" fill="#0f2b36" stroke="#1a6f8a"/>
+      <text x="12" y="522" class="card-title" fill="#ffffff">Card title</text>
+      <text x="12" y="537" class="card-body" fill="#ffffff" dominant-baseline="middle">Card body text preview</text>
+    </g>
   </g>
-  
+
+  <!-- Dark Option 2: Teal Night — Lighter -->
+  <g transform="translate(480,60)">
+    <text class="col-title" x="0" y="0">Teal Night — Lighter</text>
+    <g transform="translate(0,18)">
+      <rect x="0" y="0" width="200" height="34" fill="#0b2730"/>
+      <text x="8" y="22" class="label" fill="#ffffff">Background</text>
+      <text x="160" y="22" class="hex" fill="#ffffff">#0b2730</text>
+
+      <rect x="0" y="44" width="200" height="34" fill="#12303a"/>
+      <text x="8" y="66" class="label" fill="#ffffff">Secondary</text>
+      <text x="160" y="66" class="hex" fill="#ffffff">#12303a</text>
+
+      <rect x="0" y="88" width="200" height="34" fill="#15353f"/>
+      <text x="8" y="110" class="label" fill="#ffffff">Card</text>
+      <text x="160" y="110" class="hex" fill="#ffffff">#15353f</text>
+
+      <rect x="0" y="132" width="200" height="34" fill="#1a6f8a"/>
+      <text x="8" y="154" class="label" fill="#fff">Border</text>
+      <text x="160" y="154" class="hex" fill="#fff">#1a6f8a</text>
+
+      <rect x="0" y="176" width="200" height="34" fill="#0b2730"/>
+      <text x="8" y="198" class="label" fill="#ffffff">Text</text>
+      <text x="160" y="198" class="hex" fill="#ffffff">#ffffff</text>
+
+      <rect x="0" y="220" width="200" height="34" fill="#40baec"/>
+      <text x="8" y="242" class="label" fill="#ffffff">Accent</text>
+      <text x="160" y="242" class="hex" fill="#ffffff">#40baec</text>
+
+      <rect x="0" y="264" width="200" height="34" fill="#40baec"/>
+      <text x="8" y="286" class="label" fill="#ffffff">Link</text>
+      <text x="160" y="286" class="hex" fill="#ffffff">#40baec</text>
+
+      <rect x="0" y="308" width="200" height="34" fill="#0b2730"/>
+      <text x="8" y="330" class="label" fill="#fff">Code bg</text>
+      <text x="160" y="330" class="hex" fill="#fff">#0b2730</text>
+
+      <rect x="0" y="352" width="200" height="34" fill="#102a38"/>
+      <text x="8" y="374" class="label" fill="#fff">Header</text>
+      <text x="160" y="374" class="hex" fill="#fff">#102a38</text>
+
+      <rect x="0" y="396" width="200" height="34" fill="#173f52"/>
+      <text x="8" y="418" class="label" fill="#fff">Toggle</text>
+      <text x="160" y="418" class="hex" fill="#fff">#173f52</text>
+
+      <rect x="0" y="446" width="200" height="40" fill="#102a38"/>
+      <text x="12" y="472" class="preview-text" fill="#ffffff">Header preview</text>
+
+      <rect x="0" y="492" width="200" height="90" fill="#15353f" stroke="#1a6f8a"/>
+      <text x="12" y="522" class="card-title" fill="#ffffff">Card title</text>
+      <text x="12" y="537" class="card-body" fill="#ffffff" dominant-baseline="middle">Card body text preview</text>
+    </g>
+  </g>
+
+  <!-- Dark Option 3: Teal Night — Lighter 2 -->
+  <g transform="translate(710,60)">
+    <text class="col-title" x="0" y="0">Teal Night — Lighter 2</text>
+    <g transform="translate(0,18)">
+      <rect x="0" y="0" width="200" height="34" fill="#102a34"/>
+      <text x="8" y="22" class="label" fill="#ffffff">Background</text>
+      <text x="160" y="22" class="hex" fill="#ffffff">#102a34</text>
+
+      <rect x="0" y="44" width="200" height="34" fill="#16353f"/>
+      <text x="8" y="66" class="label" fill="#ffffff">Secondary</text>
+      <text x="160" y="66" class="hex" fill="#ffffff">#16353f</text>
+
+      <rect x="0" y="88" width="200" height="34" fill="#1b3b49"/>
+      <text x="8" y="110" class="label" fill="#ffffff">Card</text>
+      <text x="160" y="110" class="hex" fill="#ffffff">#1b3b49</text>
+
+      <rect x="0" y="132" width="200" height="34" fill="#1a6f8a"/>
+      <text x="8" y="154" class="label" fill="#fff">Border</text>
+      <text x="160" y="154" class="hex" fill="#fff">#1a6f8a</text>
+
+      <rect x="0" y="176" width="200" height="34" fill="#102a34"/>
+      <text x="8" y="198" class="label" fill="#ffffff">Text</text>
+      <text x="160" y="198" class="hex" fill="#ffffff">#ffffff</text>
+
+      <rect x="0" y="220" width="200" height="34" fill="#40baec"/>
+      <text x="8" y="242" class="label" fill="#ffffff">Accent</text>
+      <text x="160" y="242" class="hex" fill="#ffffff">#40baec</text>
+
+      <rect x="0" y="264" width="200" height="34" fill="#40baec"/>
+      <text x="8" y="286" class="label" fill="#ffffff">Link</text>
+      <text x="160" y="286" class="hex" fill="#ffffff">#40baec</text>
+
+      <rect x="0" y="308" width="200" height="34" fill="#102a34"/>
+      <text x="8" y="330" class="label" fill="#fff">Code bg</text>
+      <text x="160" y="330" class="hex" fill="#fff">#102a34</text>
+
+      <rect x="0" y="352" width="200" height="34" fill="#15303e"/>
+      <text x="8" y="374" class="label" fill="#fff">Header</text>
+      <text x="160" y="374" class="hex" fill="#fff">#15303e</text>
+
+      <rect x="0" y="396" width="200" height="34" fill="#1b4658"/>
+      <text x="8" y="418" class="label" fill="#fff">Toggle</text>
+      <text x="160" y="418" class="hex" fill="#fff">#1b4658</text>
+
+      <rect x="0" y="446" width="200" height="40" fill="#15303e"/>
+      <text x="12" y="472" class="preview-text" fill="#ffffff">Header preview</text>
+
+      <rect x="0" y="492" width="200" height="90" fill="#1b3b49" stroke="#1a6f8a"/>
+      <text x="12" y="522" class="card-title" fill="#ffffff">Card title</text>
+      <text x="12" y="537" class="card-body" fill="#ffffff" dominant-baseline="middle">Card body text preview</text>
+    </g>
+  </g>
+
   <!-- Footer note -->
-  <text x="450" y="830" font-size="13" text-anchor="middle" fill="#333">
-    Option 1: Neutral and timeless. Option 2: Cohesive monochromatic cyan/teal family.
-  </text>
-  <text x="450" y="855" font-size="12" text-anchor="middle" fill="#999">
-    Dark mode pairs will be created once light mode is finalized.
-  </text>
+  <text x="20" y="688" class="label">Notes: Accent kept as #40baec; border color unified to #1a6f8a across themes for consistency.</text>
 </svg>
