@@ -15,8 +15,8 @@
     { href: '/about/', label: 'About' },
     { href: '/research/', label: 'Research' },
     { href: '/presentations/', label: 'Presentations' },
-    { href: '/publications/', label: 'Publications' },
-    { href: '/faith-science/', label: 'Faith &amp; Science' }
+    // { href: '/publications/', label: 'Publications' },
+    // { href: '/faith-science/', label: 'Faith &amp; Science' }
   ];
 
   class SiteNav extends HTMLElement {
